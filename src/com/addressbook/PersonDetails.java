@@ -1,6 +1,6 @@
 package com.addressbook;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public abstract class PersonDetails {
 	private String firstName;
@@ -9,48 +9,67 @@ public abstract class PersonDetails {
 	private String state;
 	private String e_mail;
 	private String phoneNumber;
-	private int zipCode;
+	private String zipCode;
 
-	Scanner scanObj = new Scanner(System.in);
-
-	public void getEmail() {
-		System.out.println("Enter the Email");
-		e_mail = scanObj.nextLine();
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void getName() {
-		System.out.println("Enter the first Name");
-		firstName = scanObj.nextLine();
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public void getLastName() {
-		System.out.println("Enter the Last Name");
-		lastName = scanObj.nextLine();
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void getAddress() {
-		System.out.println("Enter the Address");
-		address = scanObj.nextLine();
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
-	public void getStateName() {
-		System.out.println("Enter the State");
-		state = scanObj.nextLine();
+	public String getAddress() {
+		return address;
 	}
 
-	public void getPhoneNumber() {
-		System.out.println("Enter the Phone Number");
-		phoneNumber = scanObj.nextLine();
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
-	public void getZipCode() {
-		System.out.println("Enter the Zip Code/Postal Code");
-		zipCode = scanObj.nextInt();
+	public String getState() {
+		return state;
 	}
 
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getE_mail() {
+		return e_mail;
+	}
+
+	public void setE_mail(String e_mail) {
+		this.e_mail = e_mail;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getZipCode() {
+		return zipCode;
+	}
+
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
+	}
+
+	@Override
 	public String toString() {
-		return "PersonDetail [firstName = " + firstName + ", lastName = " + lastName + ", address = " + address
-				+ ", state = " + state + ", email=" + e_mail + ", phoneNumber = " + phoneNumber + ", zipCode = "
-				+ zipCode + "]";
+		return "PersonDetail [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", state="
+				+ state + ", e_mail=" + e_mail + ", phoneNumber=" + phoneNumber + ", zipCode=" + zipCode + "]";
 	}
 }

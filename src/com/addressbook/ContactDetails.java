@@ -1,6 +1,6 @@
 package com.addressbook;
 
-public class ContactDetails extends PersonDetails {
+public class ContactDetails extends PersonDetails  {
 	public static void main(String[] args) {
 		ContactDetails onePersonDetails = new ContactDetails();
 		onePersonDetails.getName();

@@ -94,7 +94,7 @@ public class AddContact extends PersonDetails {
 		System.out.println("enter the name");
 		String name = scanData.nextLine();
 		for (int i = 0; i < contatctDetails.size(); i++) {
-			if (contatctDetails.get(i).getFirstName().equals(name)) {
+			if (contatctDetails.get(i).getFirstName().equals(name))  {
 				contatctDetails.remove(i);
 			} else
 				System.out.println("not match any details");
